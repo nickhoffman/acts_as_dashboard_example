@@ -62,6 +62,16 @@
 
       <div class='dashboard-clear'></div>
     </div>
+
+    <hr align='left' width='600px'/>
+
+    <div id='extras'>
+      <p>
+        Use the iframe below to create, edit, and delete tasks.<br />
+        As you do so, you'll see the dashboard reflect your changes.<br />
+      </p>
+      <iframe src="<%= ApplicationController.relative_url_root.to_s -%>/tasks" width='600px' height='400px'></iframe>
+    </div>
   </body>
 
 </html>

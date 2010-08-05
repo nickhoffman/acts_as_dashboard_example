@@ -1,12 +1,17 @@
-<h1>Listing tasks</h1>
+<%= link_to 'Create a new task', new_task_path %>
+<br />
 
-<table>
+<h1>Listing Tasks</h1>
+
+<table cellspacing='5'>
   <tr>
+    <th>Project</th>
     <th>Name</th>
   </tr>
 
 <% @tasks.each do |task| %>
   <tr>
+    <td><%=h task.project.name %></td>
     <td><%=h task.name %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
@@ -14,7 +19,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New task', new_task_path %>

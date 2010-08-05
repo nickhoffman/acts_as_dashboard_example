@@ -5,35 +5,39 @@ class DashboardsController < ApplicationController
   acts_as_dashboard
 
   dashboard_number do |d|
-    d.name            = :seconds
-    d.title           = 'Seconds This Minute'
+    d.name            = :number_of_projects
+    d.title           = 'Number of Projects'
     d.update_interval = '5s'
-    d.data            {Time.now.strftime '%S'}
+    d.data            {Project.count.to_s}
+  end
+
+  dashboard_number do |d|
+    d.name            = :number_of_tasks
+    d.title           = 'Number of Tasks'
+    d.update_interval = '5s'
+    d.data            {Task.count.to_s}
   end
 
   dashboard_short_messages do |d|
-    d.name            = :todays_full_date
-    d.title           = 'Todays Full Date'
-    d.update_interval = '10s'
-    d.data            {Time.now.to_s}
+    d.name            = :newest_task_in_improve_acts_as_dashboard
+    d.title           = 'Newest Tasks In: Improve acts_as_dashboard'
+    d.update_interval = '5s'
+    d.data            {Project.find_by_name('Improve acts_as_dashboard').tasks.last.name}
   end
 
   dashboard_line_graph do |d|
-    d.name            = :random_dates_and_numbers
-    d.title           = 'Random Dates and Numbers'
+    d.name            = :tasks_per_project
+    d.title           = 'Tasks Per Project'
     d.update_interval = '15s'
     d.line_colours    = %w(blue)
-    d.x_axis          = :dates
+    d.x_axis          = :numbers
     d.data do
-      (0..10).map do
-        year        = Time.now.year
-        month       = sprintf '%02d', rand(12) + 1
-        day         = sprintf '%02d', rand(31) + 1
-        date        = "#{year}-#{month}-#{day}"
-        data_point  = rand(20) + 1
+      data = []
+      Project.all.each_with_index do |p, i|
+        data.push [i, p.tasks.count]
+      end
 
-        [date, data_point]
-      end.to_json
+      data.to_json
     end
   end
 end
