@@ -66,14 +66,16 @@
       <div class='dashboard-clear'></div>
     </div>
 
-    <hr align='left' width='600px'/>
-
-    <div id='extras'>
-      <p>
+    <div id='extras' class='ui-widget' style='width: 610px; margin: 1em;'>
+      <div class='ui-widget-header ui-corner-tl ui-corner-tr' style='padding: 0.25em'>
         Use the iframe below to create, edit, and delete tasks.<br />
         As you do so, you'll see the dashboard reflect your changes.<br />
-      </p>
-      <iframe src="<%= ApplicationController.relative_url_root.to_s -%>/tasks" width='600px' height='400px'></iframe>
+      </div>
+      <div class='ui-widget-content ui-corner-bl ui-corner-br' style='padding: 0.25em'>
+        <center>
+          <iframe src="<%= ApplicationController.relative_url_root.to_s -%>/tasks" width='600px' height='600px' frameborder='no'></iframe>
+        </center>
+      </div>
     </div>
   </body>
 
