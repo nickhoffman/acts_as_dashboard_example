@@ -1,22 +1,36 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+set :stages,  %w(production)
+require       'capistrano/ext/multistage'
 
-set :scm, :subversion
-# Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+set :application, 'acts_as_dashboard_example'
 
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
-role :db,  "your primary db-server here", :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+set :domain,      'cretaceouslabs.com'
+set :user,        'nick'
+set :port,        9323
+set :scm,         :git
+set :scm_verbose, true
+set :repository,  "ssh://#{user}@#{domain}:#{port}/usr/src/#{application}.git"
+set :branch,      'master'
+set :deploy_via,  :export
 
-# If you are using Passenger mod_rails uncomment this:
-# if you're still using the script/reapear helper you will need
-# these http://github.com/rails/irs_process_scripts
+set :use_sudo, false
 
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+role :app, domain
+role :web, domain
+role :db,  domain, :primary => true
+
+default_run_options[:pty] = true 
+
+namespace :deploy do
+  desc "Restarting mod_rails with restart.txt"
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+
+  [:start, :stop].each do |t|
+    desc "#{t} task is a no-op with mod_rails"
+    task t, :roles => :app do
+      puts "*** The '#{t}' task is a no-op with Passenger/mod_rails."
+    end
+  end
+end
+
