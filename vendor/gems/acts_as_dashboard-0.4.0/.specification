@@ -1,0 +1,232 @@
+--- !ruby/object:Gem::Specification 
+name: acts_as_dashboard
+version: !ruby/object:Gem::Version 
+  hash: 15
+  prerelease: false
+  segments: 
+  - 0
+  - 4
+  - 0
+  version: 0.4.0
+platform: ruby
+authors: 
+- Nick Hoffman
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-08-05 00:00:00 -04:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rspec
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 13
+        segments: 
+        - 1
+        - 2
+        - 9
+        version: 1.2.9
+  type: :development
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: rspec-rails
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 31
+        segments: 
+        - 1
+        - 3
+        - 2
+        version: 1.3.2
+  type: :development
+  version_requirements: *id002
+description: acts_as_dashboard makes it easy to create dashboards in Rails apps. Very little configuration is required. Read the docs to get started.
+email: nick@deadorange.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- LICENSE
+- README.rdoc
+files: 
+- .gitignore
+- LICENSE
+- README.rdoc
+- Rakefile
+- VERSION
+- acts_as_dashboard.gemspec
+- generators/dashboard/USAGE
+- generators/dashboard/dashboard_generator.rb
+- generators/dashboard/templates/controller.erb
+- generators/dashboard/templates/dashboard.css
+- generators/dashboard/templates/dashboard.js
+- generators/dashboard/templates/jqplot-0.9.7/jquery.jqplot.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.barRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.barRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.canvasAxisLabelRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.canvasAxisLabelRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.canvasAxisTickRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.canvasAxisTickRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.canvasTextRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.canvasTextRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.categoryAxisRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.categoryAxisRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.cursor.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.cursor.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.dateAxisRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.dateAxisRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.dragable.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.dragable.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.highlighter.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.highlighter.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.logAxisRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.logAxisRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.mekkoAxisRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.mekkoAxisRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.mekkoRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.mekkoRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.ohlcRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.ohlcRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.pieRenderer.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.pieRenderer.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.pointLabels.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.pointLabels.js.orig
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.pointLabels.min.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.trendline.js
+- generators/dashboard/templates/jqplot-0.9.7/plugins/jqplot.trendline.min.js
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-anim_basic_16x16.gif
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_flat_30_cccccc_40x100.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_flat_50_5c5c5c_40x100.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_glass_20_555555_1x400.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_glass_40_0078a3_1x400.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_glass_40_ffc73d_1x400.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_gloss-wave_25_333333_500x100.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_highlight-soft_80_eeeeee_1x100.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_inset-soft_25_000000_1x100.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-bg_inset-soft_30_f58400_1x100.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-icons_222222_256x240.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-icons_4b8e0b_256x240.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-icons_a83300_256x240.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-icons_cccccc_256x240.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/images/ui-icons_ffffff_256x240.png
+- generators/dashboard/templates/jquery-ui/css/ui-darkness/jquery-ui-1.8.2.custom.css
+- generators/dashboard/templates/jquery-ui/js/jquery-1.4.2.min.js
+- generators/dashboard/templates/jquery-ui/js/jquery-ui-1.8.2.custom.min.js
+- generators/dashboard/templates/jquery.jqplot.min.css
+- generators/dashboard/templates/js.class-2.1.4/CHANGELOG
+- generators/dashboard/templates/js.class-2.1.4/MIT-LICENSE
+- generators/dashboard/templates/js.class-2.1.4/README
+- generators/dashboard/templates/js.class-2.1.4/min/command.js
+- generators/dashboard/templates/js.class-2.1.4/min/comparable.js
+- generators/dashboard/templates/js.class-2.1.4/min/constant_scope.js
+- generators/dashboard/templates/js.class-2.1.4/min/core.js
+- generators/dashboard/templates/js.class-2.1.4/min/decorator.js
+- generators/dashboard/templates/js.class-2.1.4/min/enumerable.js
+- generators/dashboard/templates/js.class-2.1.4/min/forwardable.js
+- generators/dashboard/templates/js.class-2.1.4/min/hash.js
+- generators/dashboard/templates/js.class-2.1.4/min/linked_list.js
+- generators/dashboard/templates/js.class-2.1.4/min/loader.js
+- generators/dashboard/templates/js.class-2.1.4/min/method_chain.js
+- generators/dashboard/templates/js.class-2.1.4/min/observable.js
+- generators/dashboard/templates/js.class-2.1.4/min/package.js
+- generators/dashboard/templates/js.class-2.1.4/min/proxy.js
+- generators/dashboard/templates/js.class-2.1.4/min/ruby.js
+- generators/dashboard/templates/js.class-2.1.4/min/set.js
+- generators/dashboard/templates/js.class-2.1.4/min/stack_trace.js
+- generators/dashboard/templates/js.class-2.1.4/min/state.js
+- generators/dashboard/templates/js.class-2.1.4/min/stdlib.js
+- generators/dashboard/templates/js.class-2.1.4/src/command.js
+- generators/dashboard/templates/js.class-2.1.4/src/comparable.js
+- generators/dashboard/templates/js.class-2.1.4/src/constant_scope.js
+- generators/dashboard/templates/js.class-2.1.4/src/core.js
+- generators/dashboard/templates/js.class-2.1.4/src/decorator.js
+- generators/dashboard/templates/js.class-2.1.4/src/enumerable.js
+- generators/dashboard/templates/js.class-2.1.4/src/forwardable.js
+- generators/dashboard/templates/js.class-2.1.4/src/hash.js
+- generators/dashboard/templates/js.class-2.1.4/src/linked_list.js
+- generators/dashboard/templates/js.class-2.1.4/src/loader.js
+- generators/dashboard/templates/js.class-2.1.4/src/method_chain.js
+- generators/dashboard/templates/js.class-2.1.4/src/observable.js
+- generators/dashboard/templates/js.class-2.1.4/src/package.js
+- generators/dashboard/templates/js.class-2.1.4/src/proxy.js
+- generators/dashboard/templates/js.class-2.1.4/src/ruby.js
+- generators/dashboard/templates/js.class-2.1.4/src/set.js
+- generators/dashboard/templates/js.class-2.1.4/src/stack_trace.js
+- generators/dashboard/templates/js.class-2.1.4/src/state.js
+- generators/dashboard/templates/js.class-2.1.4/src/stdlib.js
+- generators/dashboard/templates/show.html.erb
+- lib/acts_as_dashboard.rb
+- lib/acts_as_dashboard/app/views/dashboards/show.html.erb
+- lib/acts_as_dashboard/class_methods.rb
+- lib/acts_as_dashboard/config.rb
+- lib/acts_as_dashboard/instance_methods.rb
+- lib/acts_as_dashboard/line_graph_widget.rb
+- lib/acts_as_dashboard/public/javascripts/dashboard.js
+- lib/acts_as_dashboard/public/stylesheets/dashboard.css
+- lib/acts_as_dashboard/short_messages_widget.rb
+- lib/acts_as_dashboard/widget.rb
+- spec/acts_as_dashboard/class_method_specs.rb
+- spec/acts_as_dashboard/config_spec.rb
+- spec/acts_as_dashboard/instance_methods_spec.rb
+- spec/acts_as_dashboard/line_graph_widget_spec.rb
+- spec/acts_as_dashboard/short_messages_widget_spec.rb
+- spec/acts_as_dashboard/widget_spec.rb
+- spec/acts_as_dashboard_spec.rb
+- spec/shared/widget_behaviours.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+has_rdoc: true
+homepage: http://github.com/nickhoffman/acts_as_dashboard
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --charset=UTF-8
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: Create dashboards in Rails apps easily.
+test_files: 
+- spec/acts_as_dashboard_spec.rb
+- spec/spec_helper.rb
+- spec/shared/widget_behaviours.rb
+- spec/acts_as_dashboard/line_graph_widget_spec.rb
+- spec/acts_as_dashboard/config_spec.rb
+- spec/acts_as_dashboard/class_method_specs.rb
+- spec/acts_as_dashboard/short_messages_widget_spec.rb
+- spec/acts_as_dashboard/instance_methods_spec.rb
+- spec/acts_as_dashboard/widget_spec.rb
