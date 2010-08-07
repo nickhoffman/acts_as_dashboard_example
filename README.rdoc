@@ -12,6 +12,9 @@ To get the example up and running for yourself:
 4. Configure the dashboard by editing _app/controllers/dashboards_controller.rb_ .
 5. Reload the dashboard in your web browser.
 
+
+== Using acts_as_dashboard in your own app.
+
 When you're ready to use acts_as_dashboard in one of your own apps:
 1. Install the gem.
     $ sudo gem install acts_as_dashboard
