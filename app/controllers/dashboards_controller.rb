@@ -22,7 +22,7 @@ class DashboardsController < ApplicationController
     d.name            = :newest_task_in_improve_acts_as_dashboard
     d.title           = 'Newest Tasks In: Improve acts_as_dashboard'
     d.update_interval = '5s'
-    d.data            {Project.find_by_name('Improve acts_as_dashboard').tasks.last.name}
+    d.data            {CGI.escapeHTML Project.find_by_name('Improve acts_as_dashboard').tasks.last.name}
   end
 
   dashboard_line_graph do |d|
