@@ -8,7 +8,7 @@ set :user,        'nick'
 set :port,        9323
 set :scm,         :git
 set :scm_verbose, true
-set :repository,  "ssh://#{user}@#{domain}:#{port}/usr/src/#{application}.git"
+set :repository,  'http://github.com/nickhoffman/acts_as_dashboard_example.git'
 set :branch,      'master'
 set :deploy_via,  :export
 
