@@ -1,0 +1,21 @@
+== Description
+
+This project is an example website that showcases the acts_as_dashboard gem.
+
+To get the example up and running for yourself:
+1. Clone or export this repo.
+    $ git clone git@github.com:nickhoffman/acts_as_dashboard_example.git
+    $ cd acts_as_dashboard_example/
+2. Start WEBrick.
+    $ script/server
+3. View the dashboard at http://localhost:3000
+4. Configure the dashboard by editing _app/controllers/dashboards_controller.rb_ .
+5. Reload the dashboard in your web browser.
+
+When you're ready to use acts_as_dashboard in one of your own apps:
+1. Install the gem.
+    $ sudo gem install acts_as_dashboard
+2. Learn how the _dashboard_ generator works. It's very simple.
+3. Run the _dashboard_ generator in your app.
+    $ script/generate dashboard [optional_dashboard_name]
+
