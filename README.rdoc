@@ -2,6 +2,14 @@
 
 This project is an example website that showcases the acts_as_dashboard gem.
 
+
+== Demo Site
+
+You can see acts_as_dashboard live at http://cretaceouslabs.com/dashboard_example .
+
+
+== Installing this example site.
+
 To get the example up and running for yourself:
 1. Clone or export this repo.
     $ git clone git@github.com:nickhoffman/acts_as_dashboard_example.git
